@@ -7,21 +7,15 @@
   <tbody >
     <tr class="table-content">
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      @yield('dataContent1')
+      @yield('status')
+      @yield('editData')
     </tr>
     <tr class="table-content">
       <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr class="table-content">
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      @yield('dataContent2')
+      @yield('status')
+      @yield('editData')
     </tr>
   </tbody>
 </table>

@@ -10,10 +10,10 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Galeri Kegiatan</a>
+          <a class="nav-link" href="#gallery">Galeri Kegiatan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lapor Sekarang</a>
+          <a class="nav-link" href="#report">Lapor Sekarang</a>
         </li>
       </ul>
       @yield('navbar')

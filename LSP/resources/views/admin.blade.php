@@ -15,51 +15,13 @@
       <h3 class="subtittle text-center mt-5 process-subtittle">DAFTAR PENGADUAN MASYARAKAT</h3>
       <p class="process-content text-center mt-3">Data - Data Pengaduan & Aspirasi Warga </p>
 
-      <table class="container ms-auto mt-5 table-process">
-  <thead>
-    <tr>
-    <th scope="col" class="table-header">Nomor Pengaduan</th>
-    <th scope="col" class="table-header">Aspirasi Warga</th>
-    <th scope="col" class="table-header">Umpan Balik Admin</th>
-    <th scope="col" class="table-header">Status Penyelesaiaan</th>
-    <th scope="col" class="table-header">Edit Data</th>
-    </tr>
-  </thead>
-  <tbody >
-    <tr class="table-content">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>
-        <select class="form-select form-sett" id="status" name="status">
-          <option value="pending">Pending</option>
-          <option value="diproses">Diproses</option>
-          <option value="selesai">Selesai</option>
-        </select>
-    </td>
-      <td>
-      <button type="button" class="btn btn-dark">Tambah Aspirasi</button>
-    </td>
-  </tr>
-  <tr class="table-content">
-    <th scope="row">2</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    </tr>
-    <tr class="table-content">
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
-</table>
+<!-- TABLE ADMIN -->
+  @include('layouts.adminTable')
+
+
 <button type="button" class="button my-5" href="#">Simpan Data</button>
 
-<a type="button" class="button my-5" href="#">Lihat Data</a>
+<a type="button" class="button my-5" href="process">Lihat Data</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

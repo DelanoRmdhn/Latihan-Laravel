@@ -5,3 +5,15 @@
 <th scope="col" class="table-header">Umpan Balik Aspirasi</th>
 <th scope="col" class="table-header">Status Penyelesaiaan</th>
 @endsection
+
+@section('dataContent1')
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+@endsection
+
+@section('dataContent2')
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+@endsection

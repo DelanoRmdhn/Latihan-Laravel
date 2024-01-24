@@ -17,7 +17,7 @@
       <p class="subtitle">Sampaikan aspirasi dan pengaduan, kami akan memberikan solusi dari laporan anda, dan jelajahi galeri kegiatan yang warga lakukan di LaporAja.</p>
 
       <div class="d-flex">
-      <a class="button" href="#">Lapor Sekarang!</a>
+      <a class="button" href="report">Lapor Sekarang!</a>
       <a class="button " href="process">Status Laporan </a>
       </div>
     </div>
@@ -31,7 +31,7 @@
   <div class="container">
     <div class="row justify-content-between align-items-center">
       <div class="col">
-        <h3 class="subtittle">GALERI KEGIATAN</h3>
+        <h3 class="subtittle" id="gallery">GALERI KEGIATAN</h3>
         <h1 class="tittle">Momen - Momen Istimewa Warga</h1>
         
         <div class="testimonials-gallery">
@@ -88,7 +88,7 @@
   
   <div class="bg-top-lapor"></div>
 <div class="container">
-  <h1 class="subtittle text-center mt-5">LAPOR SEKARANG</h1>
+  <h1 class="subtittle text-center mt-5" id="report">LAPOR SEKARANG</h1>
   <p class="tittle text-center mt-3">Adukan keluhan, Dapatkan Solusi!</p>
 </div>
 
