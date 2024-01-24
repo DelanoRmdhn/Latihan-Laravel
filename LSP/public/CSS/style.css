@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    /* color: #161a30; */
+}
+
+/* NAVBAR */
+.navbar {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 700;
+    color: #365486;
+}
+
+.nav-item {
+    margin-right: 12px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+/* LANDING PAGE */
+.landing-page {
+    margin-top: 125px;
+    margin-bottom: 200px;
+}
+
+.title {
+    font-size: 52px;
+    line-height: 1.05;
+    font-weight: 700;
+    color: #161a30;
+    margin-bottom: 58px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #2d3250;
+    line-height: 1.8;
+    margin-bottom: 64px;
+}
+
+.button {
+    color: #fff;
+    padding: 16px 32px;
+    background-color: #31304d;
+    border: none;
+}
+
+.button:last-child {
+    margin-left: 26px;
+    color: #365486;
+    background-color: #fff;
+    border: 3px solid #2d3250;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* USER GALLERY */
+.bg-color-gallery {
+    background-color: #f0ece5;
+    padding: 64px;
+}
+
+.subtittle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #365486;
+    letter-spacing: 13px;
+}
+
+.tittle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #31304d;
+}
+
+.testimonials-gallery {
+    margin-top: 48px;
+}
+
+.testimonials-gap {
+    row-gap: 16px;
+}
+
+/* LAPOR SEKARANG */
+
+.bg-top-lapor {
+    width: 100%;
+    height: 130px;
+    background-color: #31304d;
+}
+
+/*************/
+/* PROCESS */
+/*************/
+.table-process {
+    border: 2px solid #31304d;
+}
+
+.process-subtittle {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.table-header {
+    color: #fff;
+    background-color: #0f1035;
+}
+
+.table-process td,
+.table-process th {
+    padding: 32px;
+}
+
+.table-content:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.table-content:nth-child(odd) {
+    background-color: #365486;
+    color: #fff;
+}
+
+/* ADMIN */
+
+.form-sett {
+    font-size: 14px;
+}

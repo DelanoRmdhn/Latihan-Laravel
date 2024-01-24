@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function(){
+    return view('landingPage');
+});
+
+Route::get('/process', function(){
+    return view('process');
+});
+
+Route::get('/admin', function(){
+    return view('admin');
+});
+
+Route::get('/edit', function(){
+    return view('editData');
 });
