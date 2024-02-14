@@ -1,18 +1,22 @@
+@dd({{ $test }})
+
 <section id="formulir-pengaduan">
   <div class="container px-4" style="height: 100vh;">
       <div class="row justify-content-center align-items-center">
           <div class="col-md-6 col-sm-6 shadow rounded px-5" style="border: 1px solid lightblue;">
               <div class="my-5"></div>
               <form id="formulir" action="" method="POST" enctype="multipart/form-data">
-                  @csrf
+                  {{-- @csrf --}}
                   <input type="hidden" value="pending" class="hidden" name="status">
                   <div class="input-control my-1">
-                      <label for="kategori" class="my-2">Kategori Aspirasi : </label>
-                      <select name="kategori" id="kategori" class="form-select">
-                          <option value="Kebersihan">Kebersihan</option>
-                          <option value="Keamanan">Keamanan</option>
-                          <option value="Lainnya">Lainnya</option>
-                      </select>
+
+                      <label for="category" class="my-2">Kategori Aspirasi : </label>
+                      <select name="kategori" class="form-select">
+                        @foreach ($mmk as $item)
+                            {{ $item->ket_kategori }}
+                        @endforeach
+                    </select>
+
                   </div>
                   <div class="input-control my-1">
                     <label for="kategori" class="my-2">NIS Anda : </label>
