@@ -1,3 +1,5 @@
+{{-- @dd($dataSiswa); --}}
+
 <section id="formulir-pengaduan">
   <div class="container px-4" style="height: 100vh;">
       <div class="row justify-content-center align-items-center">
@@ -17,9 +19,9 @@
                   <div class="input-control my-1">
                     <label for="kategori" class="my-2">NIS Anda : </label>
                     <select name="kategori" id="kategori" class="form-select">
-                        <option value="Kebersihan">NIS 1</option>
-                        <option value="Keamanan">NIS 2</option>
-                        <option value="Lainnya">NIS 3</option>
+                        @foreach ($dataSiswa as $nis)
+                        <option value="{{$nis->id}}">{{$nis->nis}}</option>
+                        @endforeach
                     </select>
                 </div>
                   <div class="input-control my-1">
