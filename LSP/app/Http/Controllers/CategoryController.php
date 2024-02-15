@@ -10,6 +10,7 @@ class CategoryController extends Controller
     public function index(){
         return view('landingPage', [
             'categories' => Category::all()
+            
         ]);
     }
 }

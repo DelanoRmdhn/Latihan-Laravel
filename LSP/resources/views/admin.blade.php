@@ -14,9 +14,51 @@
     <div class="container">
       <h3 class="subtittle text-center mt-5 process-subtittle">DAFTAR PENGADUAN MASYARAKAT</h3>
       <p class="process-content text-center mt-3">Data - Data Pengaduan & Aspirasi Warga </p>
-
 <!-- TABLE ADMIN -->
-  @include('layouts.adminTable')
+  <table class=" ms-auto mt-5 table-process mb-5">
+    <thead>
+      <tr>
+        <th scope="col" class="table-header">Nomor Pengaduan</th>
+        <th scope="col" class="table-header">NIS Pelapor</th>
+        <th scope="col" class="table-header">Kategori Aspirasi</th>
+        <th scope="col" class="table-header">Aspirasi</th>
+        <th scope="col" class="table-header">Lokasi Kejadian</th>
+        <th scope="col" class="table-header">Keterangan</th>
+        <th scope="col" class="table-header">Gambar Bukti</th>
+        <th scope="col" class="table-header">Status Penyelesaiaan</th>
+        <th scope="col" class="table-header" colspan="3">Aksi</th>
+      </tr>
+    </thead>
+    <tbody >
+      @forelse ($laporan as $key => $data)
+      <tr class="table-content">
+          <td>{{ $key + 1 }}</td>
+          <td>{{ $data->nis }}</td>
+          <td>{{ $data->category->ket_kategori }}</td>
+          <td>{{ $data->aspirasi }}</td>
+          <td>{{ $data->lokasi_kejadian }}</td>
+          <td>{{ $data->keterangan }}</td>
+          <td>
+            <img src="{{ asset($data->gambar_kejadian) }}" width="100px">
+          </td>
+          <td>
+            <b>
+              <span class="badge rounded-pill py-2 px-4
+              @if ($data->status == 'pending') bg-danger
+              @elseif($data->status == 'progress') bg-warning
+              @elseif($data->status == 'done') bg-success @endif">
+              {{ $data->status }}
+            </span>
+          </b>
+          </td>
+          <td><a href="#" class="btn btn-success badge rounded-pill py-2 px-4">Lihat</a></td> 
+            
+      </tr>
+      @empty
+      @endforelse
+    </tbody>
+  </table>
+
   <div class="d-flex my-5">
 
     <a type="button" class="button" href="process">Lihat Data</a>
@@ -25,6 +67,7 @@
       <button type="submit" class="button">Logout</button>
     </form>
   </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

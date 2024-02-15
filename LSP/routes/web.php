@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +52,8 @@ Route::get('/admin', function(){
 Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit-form');
 
 //KIRIM DATA SUBMIT FORM KE HOME
-
+Route::get('/process', [HomeController::class, 'index']);
+Route::get('/admin', [HomeController::class, 'adminTable']);
 
 //LOGOUT 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

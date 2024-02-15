@@ -118,7 +118,7 @@ a:link {
 
 .table-process td,
 .table-process th {
-    padding: 32px;
+    padding: 16px;
 }
 
 .table-content:nth-child(even) {
@@ -134,4 +134,10 @@ a:link {
 
 .form-sett {
     font-size: 14px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

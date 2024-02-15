@@ -32,7 +32,8 @@ class FormController extends Controller
         $laporan->status = 'pending'; // Status awal, bisa disesuaikan sesuai kebutuhan
         $laporan->save();
 
-        // Beri respons
-        return redirect()->back()->with('success', 'Formulir berhasil terkirim.');
+        // Di dalam method submitForm() dalam FormController
+        return redirect()->back()->with('success', 'Formulir berhasil terkirim. NO.Laporan anda :'  . $laporan->id);
+
     }
 }

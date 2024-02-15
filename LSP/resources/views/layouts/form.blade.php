@@ -18,7 +18,7 @@
                   </div>
                   <div class="input-control my-1">
                     <label for="nis" class="my-2">NIS Anda : </label>
-                    <input type="text" class="form-control" id="nis" name="nis">
+                    <input type="number" class="form-control" id="nis" name="nis">
                     </select>
                 </div>
                   <div class="input-control my-1">
