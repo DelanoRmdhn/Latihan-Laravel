@@ -23,10 +23,7 @@
                   @endif
                   <div class="input-control my-2">
                     <label for="username">Username:  </label>
-                    <input type="text" name="username" id="username" class="form-control @error('username') is-invalid @enderror" required autofocus>
-                    @error('username')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <input type="text" name="username" id="username" class="form-control" required autofocus>
                     
                   </div>
     

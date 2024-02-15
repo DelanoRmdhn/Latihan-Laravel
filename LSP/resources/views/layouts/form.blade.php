@@ -17,11 +17,8 @@
                       </select>
                   </div>
                   <div class="input-control my-1">
-                    <label for="kategori" class="my-2">NIS Anda : </label>
-                    <select name="kategori" id="kategori" class="form-select">
-                        @foreach ($dataSiswa as $nis)
-                        <option value="{{$nis->id}}">{{$nis->nis}}</option>
-                        @endforeach
+                    <label for="nis" class="my-2">NIS Anda : </label>
+                    <input type="text" class="form-control" id="nis" name="nis">
                     </select>
                 </div>
                   <div class="input-control my-1">

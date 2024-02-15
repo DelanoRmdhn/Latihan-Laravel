@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,12 +26,25 @@ Route::get('/process', function(){
     return view('process');
 });
 
-Route::get('/admin', function(){
-    return view('admin');
-});
+
+
+
+Route::get('/', [CategoryController::class, 'index']);
 
 Route::get('/edit', function(){
     return view('editData');
 });
 
+// LOGIN
+
+//MASUK KE LOGIN
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+//VERIFIKASI 
 Route::post('/login',[LoginController::class, 'authenticate']);
+
+Route::get('/admin', function(){
+    return view('admin');
+});
+
+//LOGOUT 
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

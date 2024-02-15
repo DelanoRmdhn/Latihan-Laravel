@@ -14,23 +14,26 @@ class LoginController extends Controller
     public function authenticate(Request $request)
 {
     // Cek apakah pengguna sudah terautentikasi
-    if (Auth::check()) {
-        return redirect()->intended('/dashboard'); // Atau rute yang sesuai
-    }
-
-    // Jika belum terautentikasi, lakukan proses login
-    $credentials = $request->only('email', 'password');
+    $credentials = $request->validate([
+        'username' => ['required',],
+        'password' => ['required'],
+    ]);
 
     if (Auth::attempt($credentials)) {
-        return redirect()->intended('/dashboard');
+        $request->session()->regenerate();
+
+        return redirect()->intended('/admin');
     }
 
-    return redirect()->route('login')->with('error', 'Email atau password salah!');
+    return redirect()->route('login')->with('error', 'Username atau password salah!');
 }
 
 
     public function logout(){
         Auth::logout();
+
+        request()->session()->invalidate();
+
         return redirect('/');
     }
 

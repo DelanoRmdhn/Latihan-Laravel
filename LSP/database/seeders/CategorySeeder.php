@@ -18,7 +18,15 @@ class CategorySeeder extends Seeder
         ]);
 
         Category::create([
-            'ket_kategori' => 'Keamanan'
+            'ket_kategori' => 'Pelanggaran'
+        ]);
+
+        Category::create([
+            'ket_kategori' => 'Kesehatan'
+        ]);
+
+        Category::create([
+            'ket_kategori' => 'Fasilitas Sekolah'
         ]);
 
         Category::create([
