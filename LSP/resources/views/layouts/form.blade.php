@@ -11,9 +11,9 @@
                   <div class="input-control my-1">
                       <label for="kategori" class="my-2">Kategori Aspirasi : </label>
                       <select name="kategori" id="kategori" class="form-select">
-                          <option value="Kebersihan">Kebersihan</option>
-                          <option value="Keamanan">Keamanan</option>
-                          <option value="Lainnya">Lainnya</option>
+                        @foreach ($categories as $category)
+                        <option value="{{$category->id}}">{{$category->ket_kategori}}</option>
+                        @endforeach
                       </select>
                   </div>
                   <div class="input-control my-1">

@@ -17,7 +17,7 @@
       <p class="subtitle">Sampaikan aspirasi dan pengaduan, kami akan memberikan solusi dari laporan anda, dan jelajahi galeri kegiatan yang warga lakukan di LaporAja.</p>
 
       <div class="d-flex">
-      <a class="button" href="report">Lapor Sekarang!</a>
+      <a class="button" href="#report">Lapor Sekarang!</a>
       <a class="button " href="process">Status Laporan </a>
       </div>
     </div>
@@ -92,7 +92,9 @@
   <p class="tittle text-center mt-3">Adukan keluhan, Dapatkan Solusi!</p>
 </div>
 
-@include('layouts.form')
+<div class="report">
+  @include('layouts.form')
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
