@@ -5,12 +5,12 @@
       <div class="row justify-content-center align-items-center">
           <div class="col-md-6 col-sm-6 shadow rounded px-5" style="border: 1px solid lightblue;">
               <div class="my-5"></div>
-              <form id="formulir" action="" method="POST" enctype="multipart/form-data">
+              <form id="formulir" action="{{ route('submit-form') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <input type="hidden" value="pending" class="hidden" name="status">
                   <div class="input-control my-1">
                       <label for="kategori" class="my-2">Kategori Aspirasi : </label>
-                      <select name="kategori" id="kategori" class="form-select">
+                      <select name="category_id" id="kategori" class="form-select">
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->ket_kategori}}</option>
                         @endforeach
@@ -26,8 +26,8 @@
                     <input type="text" class="form-control" id="aspirasi" name="aspirasi">
                   </div>
                   <div class="input-control my-1">
-                      <label for="alamat" class="my-2">Lokasi Kejadian : </label>
-                      <input type="text" class="form-control" id="alamat" name="alamat">
+                      <label for="lokasi_kejadian" class="my-2">Lokasi Kejadian : </label>
+                      <input type="text" class="form-control" id="lokasi_kejadian" name="lokasi_kejadian">
                   </div>
                   <div class="input-control my-1">
                       <label for="keterangan" class="my-2">Keterangan Detail : </label>

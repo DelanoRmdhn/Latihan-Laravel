@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +47,12 @@ Route::get('/admin', function(){
     return view('admin');
 });
 
+//SUBMIT FORM
+Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit-form');
+
+//KIRIM DATA SUBMIT FORM KE HOME
+
+
 //LOGOUT 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
