@@ -45,7 +45,7 @@
         <td>{{ $data->lokasi_kejadian }}</td>
         <td>{{ $data->keterangan }}</td>
         <td>
-          <img src="{{ asset($data->gambar_kejadian) }}" width="100px">
+          <img src="{{ asset($data->gambar_kejadian) }}" width="75px">
         </td>
         <td>
             <b>

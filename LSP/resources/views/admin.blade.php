@@ -12,9 +12,17 @@
     
     <div class="bg-top-lapor" style="height: 100px;"></div>
     <div class="container">
+
       <h3 class="subtittle text-center mt-5 process-subtittle">DAFTAR PENGADUAN MASYARAKAT</h3>
       <p class="process-content text-center mt-3">Data - Data Pengaduan & Aspirasi Warga </p>
 <!-- TABLE ADMIN -->
+
+@if(session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
   <table class=" ms-auto mt-5 table-process mb-5">
     <thead>
       <tr>
@@ -39,7 +47,7 @@
           <td>{{ $data->lokasi_kejadian }}</td>
           <td>{{ $data->keterangan }}</td>
           <td>
-            <img src="{{ asset($data->gambar_kejadian) }}" width="100px">
+            <img src="{{ asset($data->gambar_kejadian) }}" width="75px">
           </td>
           <td>
             <b>
@@ -51,7 +59,16 @@
             </span>
           </b>
           </td>
-          <td><a href="#" class="btn btn-success badge rounded-pill py-2 px-4">Lihat</a></td> 
+          <td>
+            <a href="{{ route('show', ['id' => $data->id]) }}" class="btn btn-success">Lihat</a>
+          </td>
+          <td>
+            <form action="{{ route('destroy', $data->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Hapus</button>
+            </form>
+        </td>
             
       </tr>
       @empty
@@ -61,7 +78,6 @@
 
   <div class="d-flex my-5">
 
-    <a type="button" class="button" href="process">Lihat Data</a>
     <form action="{{ route('logout') }}" method="post">
       @csrf
       <button type="submit" class="button">Logout</button>

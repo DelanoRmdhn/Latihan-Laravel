@@ -55,6 +55,14 @@ Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit
 Route::get('/process', [HomeController::class, 'index']);
 Route::get('/admin', [HomeController::class, 'adminTable']);
 
+//TAMPILKAN DATA
+Route::get('admin/show/{id}',[HomeController::class, 'show'])->middleware('auth')->name('show');
+Route::patch('admin/show/{id}', [HomeController::class, 'updateStatus'])->name('updateStatus');
+
+//HAPUS DATA
+Route::delete('/admin/{id}', [HomeController::class,'destroy'])->name('destroy');
+
+
 //LOGOUT 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
