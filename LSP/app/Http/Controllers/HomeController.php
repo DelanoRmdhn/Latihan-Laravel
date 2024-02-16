@@ -9,11 +9,13 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-
-        return view('Process', [
-            'laporan' => Laporan::all()
-        ]);
+    public function index(Request $request){
+        $laporan = laporan::all();
+        
+        if ($request->has('search')) {
+            $laporan = Laporan::where('id', 'like', '%' . $request->search . '%')->get();            
+        }
+        return view('Process',compact('laporan'));
     }
 
     public function adminTable(){

@@ -25,7 +25,7 @@
 <table class="container ms-auto mt-5 table-process mb-5">
   <thead>
     <tr>
-      <th scope="col" class="table-header">Nomor Pengaduan</th>
+      <th scope="col" class="table-header">Nomor</th>
       <th scope="col" class="table-header">NIS Pelapor</th>
       <th scope="col" class="table-header">Kategori Aspirasi</th>
       <th scope="col" class="table-header">Aspirasi</th>
