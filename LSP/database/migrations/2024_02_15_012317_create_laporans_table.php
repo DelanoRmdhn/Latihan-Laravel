@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('keterangan')->nullable();
             $table->string('gambar_kejadian')->nullable();
             $table->string('status')->nullable();
+            $table->string('feedback')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();

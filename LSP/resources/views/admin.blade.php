@@ -25,7 +25,7 @@
 
   <table class=" ms-auto mt-5 table-process mb-5">
     <thead>
-      <tr>
+      <tr class="table-header text-centerP">
         <th scope="col" class="table-header">Nomor</th>
         <th scope="col" class="table-header">NIS Pelapor</th>
         <th scope="col" class="table-header">Kategori Aspirasi</th>
@@ -34,12 +34,13 @@
         <th scope="col" class="table-header">Keterangan</th>
         <th scope="col" class="table-header">Gambar Bukti</th>
         <th scope="col" class="table-header">Status Penyelesaiaan</th>
+        <th scope="col" class="table-header">Umpan Balik</th>
         <th scope="col" class="table-header" colspan="3">Aksi</th>
       </tr>
     </thead>
     <tbody >
       @forelse ($laporan as $key => $data)
-      <tr class="table-content">
+      <tr class="table-content text-center">
           <td>{{ $key + 1 }}</td>
           <td>{{ $data->nis }}</td>
           <td>{{ $data->category->ket_kategori }}</td>
@@ -59,6 +60,7 @@
             </span>
           </b>
           </td>
+          <td>{{ $data->feedback }}</td>
           <td>
             <a href="{{ route('show', ['id' => $data->id]) }}" class="btn btn-success">Lihat</a>
           </td>
@@ -68,8 +70,7 @@
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Hapus</button>
             </form>
-        </td>
-            
+        </td>   
       </tr>
       @empty
       @endforelse

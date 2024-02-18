@@ -35,6 +35,7 @@ class HomeController extends Controller
     {
         $laporan = Laporan::findOrFail($id);
         $laporan->status = $request->input('status');
+        $laporan->feedback = $request->input('feedback');
         $laporan->save();
 
         return redirect()->route('show', $laporan->id)->with('success', 'Status berhasil diperbarui.');

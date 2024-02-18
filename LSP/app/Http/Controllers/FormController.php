@@ -11,7 +11,7 @@ class FormController extends Controller
     {
         // Validasi input
         $validatedData = $request->validate([
-            'nis' => 'required',
+            'nis' => 'required|integer|digits:8',
             'aspirasi' => 'required',
             'lokasi_kejadian' => 'required',
             'keterangan' => 'required',
@@ -30,6 +30,7 @@ class FormController extends Controller
         $laporan->keterangan = $request->keterangan;
         $laporan->gambar_kejadian = str_replace('public/', 'storage/', $gambarKejadianPath); // Ubah path untuk disimpan di kolom gambar_kejadian
         $laporan->status = 'pending'; // Status awal, bisa disesuaikan sesuai kebutuhan
+        $laporan->feedback = 'Belum ada umpan balik'; 
         $laporan->save();
 
         // Di dalam method submitForm() dalam FormController
