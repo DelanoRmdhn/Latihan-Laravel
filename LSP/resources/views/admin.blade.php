@@ -42,7 +42,7 @@
       @forelse ($laporan as $key => $data)
       <tr class="table-content text-center">
           <td>{{ $key + 1 }}</td>
-          <td>{{ $data->nis }}</td>
+          <td>{{ $data->siswa->nis }}</td>
           <td>{{ $data->category->ket_kategori }}</td>
           <td>{{ $data->aspirasi }}</td>
           <td>{{ $data->lokasi_kejadian }}</td>

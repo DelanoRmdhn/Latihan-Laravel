@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\FormDataController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -31,11 +32,8 @@ Route::get('/process', function(){
 
 
 
-Route::get('/', [CategoryController::class, 'index']);
+Route::get('/', [FormDataController::class, 'index']);
 
-Route::get('/edit', function(){
-    return view('editData');
-});
 
 // LOGIN
 

@@ -11,7 +11,7 @@ class FormController extends Controller
     {
         // Validasi input
         $validatedData = $request->validate([
-            'nis' => 'required|integer|digits:8',
+            'nis' => 'required|integer',
             'aspirasi' => 'required',
             'lokasi_kejadian' => 'required',
             'keterangan' => 'required',
@@ -24,7 +24,7 @@ class FormController extends Controller
         // Buat entri dalam database
         $laporan = new Laporan; // Gunakan namespace yang benar
         $laporan->category_id = $request->category_id;
-        $laporan->nis = $request->nis;
+        $laporan->siswa_id = $request->nis;
         $laporan->aspirasi = $request->aspirasi;
         $laporan->lokasi_kejadian = $request->lokasi_kejadian;
         $laporan->keterangan = $request->keterangan;

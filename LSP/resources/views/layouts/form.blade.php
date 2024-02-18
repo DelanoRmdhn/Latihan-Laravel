@@ -17,8 +17,11 @@
                       </select>
                   </div>
                   <div class="input-control my-1">
-                    <label for="nis" class="my-2">NIS Anda : </label>
-                    <input type="number" class="form-control" id="nis" name="nis">
+                    <label for="siswa" class="my-2">Nis Siswa : </label>
+                    <select name="nis" id="siswa" class="form-select">
+                      @foreach ($siswas as $siswa)
+                      <option value="{{$siswa->id}}">{{$siswa->nis}}</option>
+                      @endforeach
                     </select>
                 </div>
                   <div class="input-control my-1">
