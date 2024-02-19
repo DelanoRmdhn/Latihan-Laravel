@@ -23,6 +23,8 @@
 </div>
 @endif
 
+  @include('partials.dateRange')
+
   <table class=" ms-auto mt-5 table-process mb-5">
     <thead>
       <tr class="table-header text-centerP">

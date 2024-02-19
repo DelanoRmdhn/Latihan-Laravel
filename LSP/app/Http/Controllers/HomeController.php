@@ -41,6 +41,18 @@ class HomeController extends Controller
         return redirect()->route('show', $laporan->id)->with('success', 'Status berhasil diperbarui.');
     }
 
+    public function dateFilter(Request $request){
+
+        $start_date = $request->start_date;
+        $end_date = $request->end_date;
+
+        $laporan = Laporan::whereDate('created_at','>=',$start_date)
+                    ->whereDate('created_at','<=',$end_date)
+                    ->get();
+        
+        return view('admin', compact('laporan'));
+    }
+
     public function destroy($id)
     {
         $laporan = laporan::find($id);

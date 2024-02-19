@@ -57,6 +57,9 @@ Route::get('/admin', [HomeController::class, 'adminTable']);
 Route::get('admin/show/{id}',[HomeController::class, 'show'])->middleware('auth')->name('show');
 Route::patch('admin/show/{id}', [HomeController::class, 'updateStatus'])->name('updateStatus');
 
+//FILTER BERDASARKAN TANGGAL UPLOAD
+Route::get('admin/dateFilter', [HomeController::class, 'dateFilter']);
+
 //HAPUS DATA
 Route::delete('/admin/{id}', [HomeController::class,'destroy'])->name('destroy');
 
